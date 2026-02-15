@@ -1,0 +1,4 @@
+.contenedor-articulos-card {
+  display: flex;
+  flex-wrap: wrap;
+}

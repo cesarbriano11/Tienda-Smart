@@ -1,0 +1,10 @@
+.articulo-card{
+    width: 260px;
+    margin:15px;
+    border-radius:16px;
+    transition: transform 0.2s ease;
+}
+
+.articulo-card:hover{
+    transform: scale(1.03);
+}

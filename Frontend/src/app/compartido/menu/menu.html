@@ -1,0 +1,15 @@
+<div class="sidebar">
+    <ul class="menu-lista">
+        <li *ngFor="let item of menus" [routerLink]="item.ruta">
+                {{item.label}}
+        </li>
+
+        <li>
+            <div class="salir-contenedor" (click)="logout()">
+            <mat-label>Salir</mat-label>
+            <mat-icon>logout
+            </mat-icon>
+    </div>
+        </li>
+    </ul>
+</div>

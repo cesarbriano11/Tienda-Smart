@@ -1,0 +1,38 @@
+<mat-card class="articulo-card">
+    <img mat-card-imagen [src]="articulo.urlImagen" alt="Imagen artículo">
+
+    <mat-card-content>
+        <h3>{{articulo.nombreArticulo}}</h3>
+
+        <p>
+            <strong>Descripción:</strong> 
+            {{articulo.descripcion}}
+        </p>
+
+        <p>
+            <strong>Código:</strong> 
+            {{articulo.codigo}}
+        </p>
+
+         <p>
+            <strong>Precio:</strong> 
+            {{articulo.precio}}
+        </p>
+
+        <p>
+            <strong>Stock:</strong> 
+            {{articulo.stock}}
+        </p>
+
+    </mat-card-content>
+
+    <mat-card-actions aling="end">
+        <button mat-icon-button color="primary" (click)="editarArticulo()">
+            <mat-icon>edit</mat-icon>
+        </button>
+
+        <button mat-icon-button color="warn" (click)="eliminarArticulo()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,38 @@
+<div class="login">
+
+<app-cabecera></app-cabecera>
+
+    <div class="login-contenedor">
+        <mat-card class="login-recuadro">
+            <mat-card-title>Inicio de sesión</mat-card-title>
+
+            <form [formGroup]="formLogin" (ngSubmit)="login()">
+        
+                <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Usuario</mat-label>
+                <input matInput formControlName="usuarioPersonal">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>contraseña</mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
+
+        
+
+            <button mat-raised-button color="primary"  type="submit">
+                Acceder
+            </button>
+
+            <p if="mensajeError" style="color:red;">
+                {{mensajeError}}
+            </p>
+            </form>
+
+
+            <button mat-button color="primary" routerLink="/registrar">
+                Crear una cuenta.
+            </button>
+        </mat-card>
+    </div>
+</div>

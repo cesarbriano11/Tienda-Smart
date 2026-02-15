@@ -1,0 +1,8 @@
+#.NET Core
+**/bin/
+**/obj/
+.vs/
+
+#Angular
+frontend/node_modules/
+frontend/dist/

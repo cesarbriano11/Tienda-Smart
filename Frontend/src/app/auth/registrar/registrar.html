@@ -1,0 +1,56 @@
+<div class="registrar">
+    
+    <app-cabecera></app-cabecera>
+
+    <div class="registrar-contenedor">
+        <mat-card class="registrar-recuadro">
+
+            <mat-card-title>Crear Cuenta</mat-card-title>
+
+            <form [formGroup]="formularioRegistro" (ngSubmit)="registrar()">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="nombreCliente">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Primer apellido</mat-label>
+                    <input matInput formControlName="primerApellido">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Segundo apellido</mat-label>
+                    <input matInput formControlName="segundoApellido">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Dirección</mat-label>
+                    <input matInput formControlName="direccion">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput formControlName="usuarioPersonal">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>contraseña</mat-label>
+                    <input matInput type="password" formControlName="password">
+                </mat-form-field>
+
+                <button mat-raised-button color="primary"  type="submit">
+                    Registrarse
+                </button>
+
+                <p if="mensajeError" style="color:red;">
+                    {{mensajeError}}
+                </p>
+            </form>
+
+            <button mat-button color="primary" routerLink="/login">
+                Inicio sesión.
+            </button>
+
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="contenedor-articulos">
+
+    <h2>Articulos</h2>
+    <mat-form-field appearance="outline">
+        <mat-label>Sucursal</mat-label>
+
+        <mat-select (selectionChange)="cargaArticulos($event.value)">
+
+            <mat-option *ngFor="let item of sucursales" [value]="item.idSucursal">
+                {{item.nombreSucursal}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br>
+    @if(mostrarBotonAgregat){
+        <button mat-raised-button color="primary" (click)="abrirDialogInsertarArticulos()"
+        [disabled]="!idSucursalSeleccionada">
+
+    <mat-icon>add</mat-icon> Nuevo artículo
+    </button>
+    }
+</div>
+
+<br>
+<br>
+@if(idSucursalSeleccionada){
+    <div class="contenedor-articulos-card">
+        <app-articulo-card *ngFor="let item of articulos; trackBy: trackById" 
+        [articulo]="item"
+        (editar)="abrirdialogEditarArticulo($event)"
+        (eliminar)="eliminarArticulo($event)">
+        </app-articulo-card>
+    </div>
+}

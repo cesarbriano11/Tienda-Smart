@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>{{data ? 'Editar Scursal' : 'Nueva Sucursal'}}</h2>
+
+<form [formGroup]="formSucursal" (ngSubmit)="InsertarSucursal()">
+    <mat-dialog-content>
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Nombre sucursal</mat-label>
+            <input matInput formControlName="nombreSucursal">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>direccion sucursal</mat-label>
+            <input matInput formControlName="direccion">
+        </mat-form-field>
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>cancelar</button>
+        <button mat-raised-button color="primary" type="submit">
+            guardar
+        </button>
+    </mat-dialog-actions>
+</form>
