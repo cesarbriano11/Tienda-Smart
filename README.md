@@ -18,7 +18,8 @@ appsettings.json
 ```json
 "ConnectionStrings": {
   "DefaultConnection": "Server=TU_SERVER;Database=DB_TIENDA;Trusted_Connection=True;TrustServerCertificate=True;"
-}```
+}
+```
 
 Creado por: Cesar Agustin Briano Aviles
 
